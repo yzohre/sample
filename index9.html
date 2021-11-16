@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="list" id="list">
+        <button id="btn" onclick="addinput()">enter!</button>
+
+
+    </div>
+    <br>
+    <div id="parham111"></div>
+    <br>
+    <div id="ali111"></div>
+    <br>
+    <div id="reza111"></div>
+    <script>
+        let list = document.getElementById("list");
+        let person = document.getElementById("person");
+        var button = document.getElementById("btn");
+        let parham = document.getElementById("parham");
+        let ali = document.getElementById("ali");
+        let reza = document.getElementById("reza");
+        let parham111 = document.getElementById("parham111");
+        let ali111 = document.getElementById("ali111");
+        let reza111 = document.getElementById("reza111");
+
+        for (let i = 0; i < 3; i++) {
+            list.innerHTML += `<input type="text" id="person${i}">`
+        }
+
+
+
+
+
+        function addinput() {
+            let list = "";
+            var mainlist = ["shanbe", "1shanbe", "2shanbe", "3shanbe", "4shanbe", "5shanbe", "jome"]
+            let input0 = document.getElementById("person0").value;
+            let input1 = document.getElementById("person1").value;
+            let input2 = document.getElementById("person2").value;
+
+            if (input0 >= 0 && input0 < 7) {
+                for (let i = 0; i < input0; i++) {
+                    parham111.innerHTML += `<input type="text" id="parham${i}">`
+                }
+
+                // let par0 = document.getElementById("parham0");
+                // let par1 = document.getElementById("parham1");
+                // let par2 = document.getElementById("parham2");
+                // let par3 = document.getElementById("parham3");
+                // let par4 = document.getElementById("parham4");
+                // let par5 = document.getElementById("parham5");
+                // let par6 = document.getElementById("parham6");
+
+                switch (input0) {
+                    case par0 = "shanbe":
+                        list.push("shanbe")
+                        break;
+                    case par1 = "1shanbe":
+                        list.push("1shanbe")
+                        break;
+                    case par2 = "2shanbe":
+                        list.push("2shanbe")
+                        break;
+                    case par3 = "3shanbe":
+                        list.push("3shanbe")
+                        break;
+                    case par4 = "4shanbe":
+                        list.push("4shanbe")
+                        break;
+                    case par5 = "5shanbe":
+                        list.push("5shanbe")
+                        break;
+                    case par6 = "jome":
+                        list.push("jome")
+                        break;
+                }
+
+            }
+            if (input1 >= 0 && input1 < 7) {
+                for (let j = 0; j < input1; j++) {
+                    ali111.innerHTML += `<input type="text" id="ali${j}">`
+                }
+                // let ali0 = document.getElementById("ali0");
+                // let ali1 = document.getElementById("ali1");
+                // let ali2 = document.getElementById("ali2");
+                // let ali3 = document.getElementById("ali3");
+                // let ali4 = document.getElementById("ali4");
+                // let ali5 = document.getElementById("ali5");
+                // let ali6 = document.getElementById("ali6");
+                switch (input1) {
+                    case ali0 = "shanbe":
+                        list.push("shanbe")
+                        break;
+                    case ali1 = "1shanbe":
+                        list.push("1shanbe")
+                        break;
+                    case ali2 = "2shanbe":
+                        list.push("2shanbe")
+                        break;
+                    case ali3 = "3shanbe":
+                        list.push("3shanbe")
+                        break;
+                    case ali4 = "4shanbe":
+                        list.push("4shanbe")
+                        break;
+                    case ali5 = "5shanbe":
+                        list.push("5shanbe")
+                        break;
+                    case ali6 = "jome":
+                        list.push("jome")
+                        break;
+                }
+            }
+            if (input2 >= 0 && input2 < 7) {
+                for (let z = 0; z < input2; z++) {
+                    reza111.innerHTML += `<input type="text" id="reza${z}">`
+                }
+                // let reza0 = document.getElementById("reza0");
+                // let reza1 = document.getElementById("reza1");
+                // let reza2 = document.getElementById("reza2");
+                // let reza3 = document.getElementById("reza3");
+                // let reza4 = document.getElementById("reza4");
+                // let reza5 = document.getElementById("reza5");
+                // let reza6 = document.getElementById("reza6");
+
+                switch (input2) {
+                    case reza0 = "shanbe":
+                        list.push("shanbe")
+                        break;
+                    case reza1 = "1shanbe":
+                        list.push("1shanbe")
+                        break;
+                    case reza2 = "2shanbe":
+                        list.push("2shanbe")
+                        break;
+                    case reza3 = "3shanbe":
+                        list.push("3shanbe")
+                        break;
+                    case reza4 = "4shanbe":
+                        list.push("4shanbe")
+                        break;
+                    case reza5 = "5shanbe":
+                        list.push("5shanbe")
+                        break;
+                    case reza6 = "jome":
+                        list.push("jome")
+                        break;
+                }
+
+            }
+
+            console.log(list);
+
+            // let show1 = mainlist.filter(n => !list.includes(n));
+            // document.write(show1);
+
+        }
+
+
+
+
+
+        // var list = []
+        // var mainlist = ["shanbe", "1shanbe", "2shanbe", "3shanbe", "4shanbe", "5shanbe", "jome"]
+        // var parham = prompt("enter parham days");
+        // if (parham >= 0 && parham < 7) {
+
+        //     for (let i = 0; i < parham; i++) {
+        //         var inputsparham = prompt("please enter")
+        //     }
+        //     switch (inputsparham) {
+        //         case inputsparham = "shanbe":
+        //             list.push("shanbe")
+        //             break;
+        //         case inputsparham = "1shanbe":
+        //             list.push("1shanbe")
+        //             break;
+        //         case inputsparham = "2shanbe":
+        //             list.push("2shanbe")
+        //             break;
+        //         case inputsparham = "3shanbe":
+        //             list.push("3shanbe")
+        //             break;
+        //         case inputsparham = "4shanbe":
+        //             list.push("4shanbe")
+        //             break;
+        //         case inputsparham = "5shanbe":
+        //             list.push("5shanbe")
+        //             break;
+        //         case inputsparham = "jome":
+        //             list.push("jome")
+        //             break;
+        //     }
+
+        // } else {
+        //     ali;
+        // }
+        // var ali = prompt("enter ali days");
+        // if (ali >= 0 && ali < 7) {
+
+        //     for (let j = 0; j < ali; j++) {
+        //         var inputsali = prompt("please enter")
+
+        //     }
+        //     switch (inputsali) {
+        //         case inputsali = "shanbe":
+        //             list.push("shanbe")
+        //             break;
+        //         case inputsali = "1shanbe":
+        //             list.push("1shanbe")
+        //             break;
+        //         case inputsali = "2shanbe":
+        //             list.push("2shanbe")
+        //             break;
+        //         case inputsali = "3shanbe":
+        //             list.push("3shanbe")
+        //             break;
+        //         case inputsali = "4shanbe":
+        //             list.push("4shanbe")
+        //             break;
+        //         case inputsali = "5shanbe":
+        //             list.push("5shanbe")
+        //             break;
+        //         case inputsali = "jome":
+        //             list.push("jome")
+        //             break;
+        //     }
+        // } else {
+        //     reza;
+        // }
+        // var reza = prompt("enter reza days");
+        // if (reza >= 0 && reza < 7) {
+
+        //     for (let z = 0; z < reza; z++) {
+        //         var inputsreza = prompt("please enter")
+
+        //     }
+        //     switch (inputsreza) {
+        //         case inputsreza = "shanbe":
+        //             list.push("shanbe")
+        //             break;
+        //         case inputsreza = "1shanbe":
+        //             list.push("1shanbe")
+        //             break;
+        //         case inputsreza = "2shanbe":
+        //             list.push("2shanbe")
+        //             break;
+        //         case inputsreza = "3shanbe":
+        //             list.push("3shanbe")
+        //             break;
+        //         case inputsreza = "4shanbe":
+        //             list.push("4shanbe")
+        //             break;
+        //         case inputsreza = "5shanbe":
+        //             list.push("5shanbe")
+        //             break;
+        //         case inputsreza = "jome":
+        //             list.push("jome")
+        //             break;
+        //     }
+        // }
+
+        // let show1 = mainlist.filter(n => !list.includes(n));
+        // console.log(show1.length);
+    </script>
+</body>
+
+</html>

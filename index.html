@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input class="inputs" type="text" placeholder="1"><br>
+    <p></p>
+    <input class="inputs" type="text" placeholder="2"><br>
+    <p></p>
+    <input class="inputs" type="text" placeholder="3"><br>
+    <p></p>
+    <input class="inputs" type="text" placeholder="4"><br>
+    <p></p>
+    <input class="inputs" type="text" placeholder="5"><br>
+    <p></p>
+    <input class="inputs" type="text" placeholder="6"><br>
+    <p></p>
+    <button onclick="check()">click me</button> -->
+
+    <script>
+        // function check() {
+        //     let inputs = document.getElementsByClassName('inputs')
+        //     let TagP = document.getElementsByTagName('p')
+
+        //     for (let i = 0; i < inputs.length; i++) {
+        //         TagP[i].innerHTML = parseInt(inputs[i].value) + 1;
+        //     }
+
+
+
+        // }
+        let english = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "u", "w", "x", "y", "z",
+            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "V", "U", "W", "X", "Y", "Z",
+            "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "}", "{", "~", "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+        ]
+        let persian = ["ا", "ب", "پ", "ت", "ث", "ج", "چ", "ح", "خ", "د", "ذ", "ر", "ز", "ٓژ", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ک", "گ", "ل", "م", "ن", "و", "ه", "ی", "/",
+            "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "}", "{", "~", "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+        ]
+
+
+        function generator(len, lang) {
+            let result = '';
+            for (let i = 0; i < len; i++) {
+                let num = getRandome()
+                result += getCharachter(num, lang)
+            }
+
+
+            return result
+        }
+
+        function getCharachter(num, lang) {
+            if (lang.toLowerCase() == 'persian') {
+                if (num < persian.length) {
+                    return persian[num]
+                } else {
+                    num = getRandome()
+                    getCharachter(num)
+                }
+            } else
+            if (lang.toLowerCase() == 'english') {
+                if (num < english.length) {
+                    return english[num]
+                } else {
+                    num = getRandome()
+                    getCharachter(num)
+                }
+            }
+        }
+
+        function getRandome() {
+            return Math.floor(Math.random() * 30)
+        }
+
+
+
+        function check() {
+            console.log(generator(10, "english"));
+        }
+    </script>
+</body>
+
+
+
+
+</html>

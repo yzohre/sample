@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let txt = prompt("enter your number");
+        let upper = [];
+        let lower = [];
+        for (let i = 0; i < txt.length; i++) {
+            if (txt[i] == txt[i].toUpperCase()) {
+                upper.push(txt[i]);
+            } else {
+                lower.push(txt[i]);
+            }
+        }
+        if (lower >= upper) {
+            txt = txt.toLowerCase();
+        } else {
+            txt = txt.toUpperCase();
+        }
+        console.log(txt);
+    </script>
+</body>
+
+</html>

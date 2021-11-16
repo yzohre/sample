@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var input = prompt("inter your word");
+    input = input.toLowerCase()
+    let mosavet = "aieouy";
+    for (let i = 0; i < input.length; i++) {
+        let element = input[i];
+        for (let j = 0; j < mosavet.length; j++) {
+            let filter = mosavet[j];
+            input = input.replace(filter, "")
+        }
+
+    }
+
+    let x = ''
+    let c = 0
+    for (let index = 0; index < input.length * 2; index++) {
+        if (index % 2 == 0) x = x + '.'
+        else {
+            x = x + input[c]
+            c++
+        }
+
+
+    }
+
+    console.log(x);
+</script>
+
+</html>

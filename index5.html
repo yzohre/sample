@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myword = "hello";
+        let txt = prompt("enter your number");
+        let letter = [];
+        let store = 0
+        for (let i = 0; i < myword.length; i++) {
+            for (let j = store; j < txt.length; j++) {
+                console.log(myword[i], txt[j]);
+                if (myword[i] == txt[j]) {
+                    letter.push(txt[j]);
+                    store = j++
+                        break
+                }
+            }
+        }
+        letter = letter.join('')
+        console.log(myword, letter);
+        if (letter == myword) {
+            alert("yes");
+        } else {
+            alert("no");
+        }
+    </script>
+</body>
+
+</html>

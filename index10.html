@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name">
+    <input type="text" id="age">
+    <button id="btn" onclick="serchbysintax()">button</button>
+    <script>
+        let list = [{
+            name: 'ali',
+            age: 18
+        }, {
+            name: 'mohammad',
+            age: 20
+        }, {
+            name: 'reza',
+            age: 11
+        }, {
+            name: 'saied',
+            age: 13
+        }, {
+            name: 'matin',
+            age: 5
+        }, {
+            name: 'alireza',
+            age: 18
+        }, {
+            name: 'javad',
+            age: 25
+        }, {
+            name: 'zohre',
+            age: 25
+        }, {
+            name: 'sara',
+            age: 25
+        }, {
+            name: 'eli',
+            age: 25
+        }, {
+            name: 'fatemeh',
+            age: 25
+        }, {
+            name: 'fatemeh',
+            age: 18
+        }, {
+            name: 'fatemeh',
+            age: 12
+        }, {
+            name: 'reza',
+            age: 23
+        }, {
+            name: 'saied',
+            age: 43
+        }, {
+            name: 'eli',
+            age: 13
+        }, {
+            name: 'zohre',
+            age: 52
+        }, ];
+
+        let btn = document.getElementById("btn");
+
+        function serchbysintax() {
+            let name = document.getElementById("name").value;
+
+            let findedItems = list.filter(
+                item => {
+                    return item.name.includes(name);
+                }
+            )
+
+            console.log('finded Items is : ', findedItems);
+
+
+            // for (let i = 0; i < list.length; i++) {
+
+            //     if (list.filter(item => item.name[i] == name)) {
+
+            //         console.log(list.filter(item => item.name[i] == name));
+            //     }
+
+
+
+            // }
+            // list.sort(sorting);
+
+            // function sorting(x, y) {
+            //     if (x.age < y.age) {
+            //         return x.age - y.age;
+            //     }
+            // }
+            // console.log(list);
+
+            // function searching() {
+            //     let name = document.getElementById("name").value;
+            //     let age = document.getElementById("age").value;
+            //     if (name && age) {
+            //         const filterlist = list.find(item =>
+            //                 item.name == name && item.age == age)
+            //             // document.write(filterlist.name, filterlist.age)
+            //         console.log(filterlist);
+            //     }
+            // }
+
+
+        }
+    </script>
+</body>
+
+</html>
